@@ -1,12 +1,12 @@
 '''
 Description
 -----------
-A small Python AI which play to Baltoslave.
+A small Python AI which play to Baltoslav.
 
 Classes
 -------
 .. autoclass:: Languages
-.. autoclass:: Baltoslave
+.. autoclass:: Baltoslav
 
 Exemples
 --------
@@ -17,7 +17,7 @@ Assuming ``ia.py`` was imported as follow ::
 We can create an instance ::
 
     >>> database = Languages()       # creates a new database
-    >>> my_bs = bs.Baltoslave(database)
+    >>> my_bs = bs.Baltoslav(database)
     >>> my_bs.run_training(10)       # launchs a training session
     >>> database.save('bs_exemple')  # saves the changes
 '''
@@ -177,9 +177,9 @@ class Languages:
         self.add_languages(new_languages)
 
 
-class Baltoslave:
+class Baltoslav:
     '''
-    This class implements a small AI that plays Baltoslave.
+    This class implements a small AI that plays Baltoslav.
 
     Attributes
     ----------
@@ -212,7 +212,7 @@ class Baltoslave:
 
         found_languages : list
             The list of the languages that matched, sorted by decreasing confidence, e.g. the output
-            of ``Baltoslave.identification``.
+            of ``Baltoslav.identification``.
 
         Returns
         -------

@@ -1,5 +1,5 @@
 from random import choice
-import baltoslave.ia as bs
+import baltoslav.ia as bs
 
 
 def game():

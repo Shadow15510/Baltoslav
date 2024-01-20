@@ -1,20 +1,23 @@
-.. Baltoslave documentation master file, created by
-   sphinx-quickstart on Wed Jan 17 20:31:06 2024.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+==========================
+Baltoslav's documentation
+==========================
 
-Welcome to Baltoslave's documentation!
-======================================
+Description
+-----------
+Baltoslav is a small Python AI that plays 'Guess the Language' on the site: `baltoslav <https://baltoslav.eu/adhadaj/index.php?mova=en/>`_. This package also provides an offline version of this game.
 
+Installation
+------------
+A PyPI solution will be setup.
+
+Licence
+-------
+This project is under GNU General Public Licence v3.0 or later (GPLv3+).
+Please see `LICENCE <https://github.com/Shadow15510/Baltoslav/blob/master/LICENSE>`_ for more informations.
+
+Content
+-------
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+	Home <self>
+	AI <ai>
+	Game <game>
