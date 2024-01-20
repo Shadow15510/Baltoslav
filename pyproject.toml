@@ -3,9 +3,9 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "baltoslave"
+name = "Baltoslav"
 authors = [
-	{name="Sha-chan"},
+	{name="Antoine ROYER"},
 ]
 description = ""
 readme = {file = "README.md", content-type = "text/markdown"}
@@ -33,11 +33,11 @@ doc = [
 ]
 
 [tool.setuptools.dynamic.version]
-attr = "baltoslave.__init__.__version__"
+attr = "baltoslav.__init__.__version__"
 
 [tool.setuptools.dynamic]
 dependencies = {file = ["requirements.txt"]}
 
 [project.urls]
-Homepage = "https://github.com/Shadow15510/Baltoslave"
+Homepage = "https://github.com/Shadow15510/Baltoslav"
 Documentation = "baltoslave.rtfd.io"
