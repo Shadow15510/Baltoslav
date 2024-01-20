@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "baltoslave"
+authors = [
+	{name="Sha-chan"},
+]
+description = ""
+readme = {file = "README.md", content-type = "text/markdown"}
+requires-python = ">=3.7"
+classifiers = [
+	"Programming Language :: Python :: 3",
+	"License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+	"Development Status ::",
+]
+dynamic = [
+	"version",
+	"dependencies"
+]
+
+[tool.setuptools]
+license-files = [
+    "LICENSE",
+]
+
+[project.optional-dependencies]
+doc = [
+    "sphinx>=7.0.1",
+    "sphinx-rtd-theme",
+    "sphinx-autodocgen",
+]
+
+[tool.setuptools.dynamic.version]
+attr = "baltoslave.__init__.__version__"
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[project.urls]
+Homepage = ""
+Documentation = ""
