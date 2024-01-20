@@ -1,11 +1,25 @@
+'''
+This module reproduce an offline version of Guess the Language from baltoslav.eu.
+
+Functions
+---------
+.. autofunction:: guess_the_language
+'''
 from random import choice
-import baltoslav.ia as bs
+from baltoslav.ia import Languages
 
 
-def game():
-    languages = bs.Languages()
-    languages.load('bs_hybrid')
+def guess_the_language(languages: Languages):
+    '''
+    The offline version of Guess the Language. In this version you have five lives, five suggestions
+    and you earn one point per good answer. You need to copy/paste you suggestion in the input
+    field.
 
+    Parameters
+    ----------
+    languages : Languages
+        The database on which the game will be based.
+    '''
     lives = 5
     points = 0
     while lives:

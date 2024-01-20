@@ -1,7 +1,5 @@
 '''
-Description
------------
-A small Python AI which play to Baltoslav.
+A small Python AI that plays to Baltoslav, Guess the Language.
 
 Classes
 -------
@@ -12,7 +10,7 @@ Exemples
 --------
 Assuming ``ia.py`` was imported as follow ::
 
-    >>> import baltoslave.ia as bs
+    >>> import baltoslav.ia as bs
 
 We can create an instance ::
 
@@ -187,17 +185,30 @@ class Baltoslav:
         The maximum number of guess before exiting the game.
     languages : Languages
         The database, under the form of a Languages's instance.
+    game_lang : str
+        The language code.
 
     Methods
     -------
+    .. automethod:: __init__
     .. automethod:: run_training
     .. automethod:: run_playing
     '''
     limit = 500
 
-    def __init__(self, languages: Languages):
-        '''Constructor method.'''
+    def __init__(self, languages: Languages, game_lang: str='en'):
+        '''
+        Constructor method.
+
+        Parameters
+        ----------
+        languages : baltoslav.Languages
+            The database, under the form of a Languages's instance.
+        game_lang : str, optionnal
+            The language code.
+        '''
         self.languages = languages
+        self.game_lang = game_lang
 
     def __get_button(self, buttons: list, found_languages: list):
         '''
@@ -311,7 +322,7 @@ class Baltoslav:
             The number of training sessions.
         '''
         driver = webdriver.Firefox()
-        driver.get('https://baltoslav.eu/adhadaj/index.php?co=g&mova=fr')
+        driver.get(f'https://baltoslav.eu/adhadaj/index.php?co=g&mova={self.game_lang}')
         for i in range(iterations):
             self.__main(driver, training=True)
             if (i + 1) < iterations:
@@ -321,5 +332,5 @@ class Baltoslav:
     def run_playing(self):
         '''Runs the AI in playing mode.'''
         driver = webdriver.Firefox()
-        driver.get('https://baltoslav.eu/adhadaj/index.php?co=g&mova=fr')
+        driver.get(f'https://baltoslav.eu/adhadaj/index.php?co=g&mova={self.game_lang}')
         self.__main(driver, training=False)
