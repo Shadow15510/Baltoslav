@@ -32,10 +32,15 @@ class Languages:
     '''
     Implements a database as a dictionnary ``{language name: [words]}``. The basic manipulations on
     dict are still available:
+
     * ``len`` function
+    
     * ``in`` operator
+    
     * ``keys`` function
+    
     * ``values`` function
+    
     * ``items`` function
 
     Attributes
