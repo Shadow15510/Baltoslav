@@ -4,7 +4,7 @@ A small Python AI that plays to Baltoslav, Guess the Language.
 Classes
 -------
 .. autoclass:: Languages
-.. autoclass:: Baltoslav
+.. autoclass:: BaltoslavAI
 
 Exemples
 --------
@@ -15,7 +15,7 @@ Assuming ``ia.py`` was imported as follow ::
 We can create an instance ::
 
     >>> database = Languages()       # creates a new database
-    >>> my_bs = bs.Baltoslav(database)
+    >>> my_bs = bs.BaltoslavAI(database)
     >>> my_bs.run_training(10)       # launchs a training session
     >>> database.save('bs_exemple')  # saves the changes
 '''
@@ -175,7 +175,7 @@ class Languages:
         self.add_languages(new_languages)
 
 
-class Baltoslav:
+class BaltoslavAI:
     '''
     This class implements a small AI that plays Baltoslav.
 
