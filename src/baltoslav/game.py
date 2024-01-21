@@ -19,7 +19,7 @@ You first need a language database::
     >>> guess_the_language(my_lang_db)
 '''
 from random import choice
-from baltoslav.ia import Languages
+from baltoslav.ai import Languages
 
 
 def guess_the_language(languages: Languages):
