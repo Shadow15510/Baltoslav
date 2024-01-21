@@ -8,7 +8,7 @@ Baltoslav is a small Python AI that plays 'Guess the Language' on the site: `bal
 
 Installation
 ------------
-A PyPI solution will be setup.
+This package is automatically deployed on `PyPI <https://pypi.org/project/Baltoslav//>`_ so please consider using: `pip install baltoslav`.
 
 Licence
 -------
@@ -19,5 +19,6 @@ Content
 -------
 .. toctree::
 	Home <self>
+	Tutorial <tutorial>
 	AI <ai>
 	Game <game>
