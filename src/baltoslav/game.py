@@ -4,6 +4,19 @@ This module reproduce an offline version of Guess the Language from baltoslav.eu
 Functions
 ---------
 .. autofunction:: guess_the_language
+
+Exemples
+--------
+Assuming the module was imported as follow::
+
+    >>> from baltoslav.ai import Languages
+    >>> from baltoslav.game import guess_the_language
+
+You first need a language database::
+
+    >>> my_lang_db = Languages()
+    >>> my_lang_db.load('languages_database')
+    >>> guess_the_language(my_lang_db)
 '''
 from random import choice
 from baltoslav.ia import Languages
@@ -12,8 +25,7 @@ from baltoslav.ia import Languages
 def guess_the_language(languages: Languages):
     '''
     The offline version of Guess the Language. In this version you have five lives, five suggestions
-    and you earn one point per good answer. You need to copy/paste you suggestion in the input
-    field.
+    and you earn one point per good answer. You need to copy/paste you answer in the input field.
 
     Parameters
     ----------
