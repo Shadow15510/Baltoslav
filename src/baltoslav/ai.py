@@ -328,6 +328,10 @@ class BaltoslavAI:
         '''
         driver = webdriver.Firefox()
         driver.get(f'https://baltoslav.eu/adhadaj/index.php?co=g&mova={self.game_lang}')
+        time.sleep(2)
+        consent = driver.find_element(By.CLASS_NAME, 'fc-dialog-container')
+        button = consent.find_element(By.CLASS_NAME, 'fc-button').click()
+        time.sleep(1)
         for i in range(iterations):
             self.__main(driver, training=True)
             if (i + 1) < iterations:
@@ -338,4 +342,8 @@ class BaltoslavAI:
         '''Runs the AI in playing mode.'''
         driver = webdriver.Firefox()
         driver.get(f'https://baltoslav.eu/adhadaj/index.php?co=g&mova={self.game_lang}')
+        time.sleep(2)
+        consent = driver.find_element(By.CLASS_NAME, 'fc-dialog-container')
+        button = consent.find_element(By.CLASS_NAME, 'fc-button').click()
+        time.sleep(1)
         self.__main(driver, training=False)
